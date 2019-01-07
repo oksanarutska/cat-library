@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.ov_common_card').insertAdjacentHTML("afterbegin", renderKittens(cats));
-
 });
+
 // From: https://stackoverflow.com/questions/1484506/random-color-generator
 function getRandomColor() {
     let letters = '0123456789ABCDEF';
@@ -21,11 +21,11 @@ function renderKitten(kitten) {
     <img src="${kitten.img_url}"
          class="ov_kitten_img">
   </div>
- <div class="ov_footer_cat">
-   <div class="ov_kitten_information">
+  <div class="ov_footer_cat">
+    <div class="ov_kitten_information">
      <span>#${kitten.id}</span>
      <span>${kitten.name}</span>
-   </div>
+    </div>
    <div class="ov_space_line"></div>
    <div class="ov_kitten_information">
      <span>${kitten.category}</span> 
@@ -33,14 +33,9 @@ function renderKitten(kitten) {
  </div>
 </div>`;
 }
-
-
 function renderKittens(cats) {
     return cats.map(cat => renderKitten(cat))
-        .join('');
-}
-
-
+        .join('');}
 const cats = [
     {
         "id": 1,
