@@ -7,11 +7,7 @@
     position: relative;
 
 }
-.ov_kitten_card:hover{
-    cursor: pointer;
-    width: 250px;
-    height: 290px;
-}
+
 
 .ov_kitten_img{
     width: 250px;
