@@ -1,0 +1,63 @@
+
+.ov_kitten_card{
+    width: 260px;
+    height: 300px;
+    background-color: var( --color_light_blue);
+    border-radius: 20px;
+    position: relative;
+
+}
+.ov_kitten_card:hover{
+    cursor: pointer;
+    width: 250px;
+    height: 290px;
+}
+
+.ov_kitten_img{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    margin: 0 auto;
+}
+.ov_information_card{
+    margin-bottom: 15px;
+    height: 400px;
+    display: flex;
+   align-items: center;
+    flex-direction: column;
+    width: 260px;
+    border-radius: 20px;
+    background-color: var(--color_capuchino);
+}
+.ov_price{
+    position: absolute;
+    top: 15px;
+    left: 80px;
+    background-color: var(--color_white);
+    border-radius: 10px;
+
+}
+.ov_text_price{
+    padding: 10px 30px;
+}
+.ov_kitten_information{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 15px;
+}
+.ov_space_line{
+    border-bottom: 2px dashed var(--color_yellow_green);
+}
+.ov_footer_cat{
+    display: flex;
+    width: 85%;
+    align-items: normal;
+    flex-direction: column;
+}
+.ov_common_card{
+    display: flex;
+    width: 85%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
