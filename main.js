@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementsByTagName('div')[0].insertAdjacentHTML("afterbegin", renderKittens(cats));
+    document.querySelector('.ov_common_card').insertAdjacentHTML("afterbegin", renderKittens(cats));
     [...document.getElementsByClassName('ov_kitten_card')].forEach(element => {
         element.style.backgroundColor=getRandomColor();
     })
