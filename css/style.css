@@ -5,6 +5,8 @@
     background-color: var(--color_light_blue);
     border-radius: 20px;
     position: relative;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -29,7 +31,6 @@
 .ov_price {
     position: absolute;
     top: 15px;
-    left: 80px;
     background-color: var(--color_white);
     border-radius: 10px;
 
