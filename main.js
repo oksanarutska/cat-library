@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.ov_common_card').insertAdjacentHTML("afterbegin", renderKittens(cats));
-   
-});
 
+});
+// From: https://stackoverflow.com/questions/1484506/random-color-generator
 function getRandomColor() {
     let letters = '0123456789ABCDEF';
     let color = '#';
