@@ -46,7 +46,7 @@
         <counts>
           <entry key="css" value="537" />
           <entry key="html" value="704" />
-          <entry key="js" value="954" />
+          <entry key="js" value="965" />
           <entry key="pug" value="11" />
         </counts>
       </usages-collector>
@@ -55,13 +55,13 @@
           <entry key="CSS" value="537" />
           <entry key="HTML" value="704" />
           <entry key="Jade" value="11" />
-          <entry key="JavaScript" value="954" />
+          <entry key="JavaScript" value="965" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.52750224">
+    <splitter split-orientation="horizontal" split-proportion="0.7448152">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -88,10 +88,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+                <state relative-caret-position="34">
+                  <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
                   <folding>
-                    <element signature="n#div#0;n#!!top" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="e#579#935#0" />
                   </folding>
                 </state>
@@ -258,15 +258,16 @@
       <option name="presentableId" value="Default" />
       <updated>1546682478933</updated>
       <workItem from="1546682481602" duration="3596000" />
-      <workItem from="1546803131691" duration="22841000" />
+      <workItem from="1546803131691" duration="23148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26437000" />
+    <option name="totallyTimeSpent" value="26744000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1748512" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -362,10 +363,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        <state relative-caret-position="34">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
           <folding>
-            <element signature="n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#579#935#0" />
           </folding>
         </state>

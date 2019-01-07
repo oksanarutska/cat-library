@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.ov_common_card').insertAdjacentHTML("afterbegin", renderKittens(cats));
-    [...document.getElementsByClassName('ov_kitten_card')].forEach(element => {
-        element.style.backgroundColor=getRandomColor();
-    })
+   
 });
 
 function getRandomColor() {
@@ -16,7 +14,7 @@ function getRandomColor() {
 
 function renderKitten(kitten) {
     return `<div class="ov_information_card">
-  <div class="ov_kitten_card">
+  <div class="ov_kitten_card" style="background-color: ${getRandomColor()}">
     <div class="ov_price">
       <span class="ov_text_price">Price: ${kitten.price}</span>
     </div>
