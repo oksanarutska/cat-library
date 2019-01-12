@@ -43,11 +43,20 @@ function renderKittens(cats) {
 //     const cats= JSON.parse(this.responseText);
 //     document.querySelector('.ov_common_card').insertAdjacentHTML("afterbegin", renderKittens(cats.cats));
 // }
+let loader= document.getElementById('loader');
+loader.classList.add('loader_opened');
+
+
 fetch('https://ma-cats-api.herokuapp.com/api/cats?&per_page=12')
     .then(
         function(response) {
             response.json().then(function(cats) {
-                document.querySelector('.ov_common_card').insertAdjacentHTML("afterbegin", renderKittens(cats.cats));
+                setTimeout(function () {
+                    document.querySelector('.ov_common_card').insertAdjacentHTML("afterbegin", renderKittens(cats.cats));
+                    loader.classList.remove('loader_opened');
+                }, 2000);
+
             });
         }
     );
+
