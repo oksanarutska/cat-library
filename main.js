@@ -1,4 +1,3 @@
-
 // From: https://stackoverflow.com/questions/1484506/random-color-generator
 function getRandomColor() {
     let letters = '0123456789ABCDEF';
@@ -30,10 +29,12 @@ function renderKitten(cat) {
  </div>
 </div>`;
 }
+
 function renderKittens(cats) {
     return cats.map(cat => renderKitten(cat))
-        .join('');}
-        
+        .join('');
+}
+
 // var oReq = new XMLHttpRequest();
 // oReq.onload = reqListener;
 // oReq.open("get", "https://ma-cats-api.herokuapp.com/api/cats", true);
@@ -43,20 +44,18 @@ function renderKittens(cats) {
 //     const cats= JSON.parse(this.responseText);
 //     document.querySelector('.ov_common_card').insertAdjacentHTML("afterbegin", renderKittens(cats.cats));
 // }
-let loader= document.getElementById('loader');
-loader.classList.add('loader_opened');
 
 
-fetch('https://ma-cats-api.herokuapp.com/api/cats?&per_page=12')
-    .then(
-        function(response) {
-            response.json().then(function(cats) {
-                setTimeout(function () {
-                    document.querySelector('.ov_common_card').insertAdjacentHTML("afterbegin", renderKittens(cats.cats));
-                    loader.classList.remove('loader_opened');
-                }, 2000);
+document.addEventListener("DOMContentLoaded", async function (event) {
+    let loader = document.getElementById('loader');
+    loader.classList.add('loader_opened');
 
-            });
-        }
-    );
+    const response = await fetch('https://ma-cats-api.herokuapp.com/api/cats?&per_page=12');
+    const cats = await response.json();
+
+    setTimeout(function () {
+        document.querySelector('.ov_common_card').insertAdjacentHTML("afterbegin", renderKittens(cats.cats));
+        loader.classList.remove('loader_opened');
+    }, 2000);
+});
 
