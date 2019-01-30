@@ -65,7 +65,9 @@
     margin: 0 auto;
 }
 .ball-grid-pulse > div {
-    background-color: red;
+    background-color: purple;
+
+
 
 }
 .loader-small .loader-inner {
@@ -76,7 +78,7 @@
     display: none;
     z-index: 1000;
     pointer-events: none;
-    background-color: rgba(4, 2, 2, 0.66);
+    background-color: mediumpurple;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -93,4 +95,23 @@ body {
 }
 .loader_opened{
     display: block;
+}
+.wrapper_nav{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: column;
+    margin-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.button_prev{
+    width: 100px;
+    height: 50px;
+    background-color: red;
+}
+.button_next{
+    width: 100px;
+    height: 50px;
+    background-color: green;
 }

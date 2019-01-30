@@ -12,9 +12,10 @@ function renderKitten(cat) {
     return `<div class="ov_information_card">
   <div class="ov_kitten_card" style="background-color: ${getRandomColor()}">
     <div class="ov_price">
-      <span class="ov_text_price">Price: ${cat.price}</span>
+      <span class="ov_text_price">Price: ${cat.auction.current_price}</span>
     </div>
-    <img src="${cat.img_url}"
+    <img src="${cat.image_url}"
+         title="${cat.enhanced_cattributes.map(a => a.description).join(', ')}"
          class="ov_kitten_img">
   </div>
   <div class="ov_footer_cat">
@@ -35,27 +36,55 @@ function renderKittens(cats) {
         .join('');
 }
 
-// var oReq = new XMLHttpRequest();
-// oReq.onload = reqListener;
-// oReq.open("get", "https://ma-cats-api.herokuapp.com/api/cats", true);
-// oReq.send();
-//
-// function reqListener() {
-//     const cats= JSON.parse(this.responseText);
-//     document.querySelector('.ov_common_card').insertAdjacentHTML("afterbegin", renderKittens(cats.cats));
-// }
+var currentPage = 1;
+var per_page = 12;
+var searchString = '';
+var orderby;
+var orderdir = 'asc';
 
-
-document.addEventListener("DOMContentLoaded", async function (event) {
+async function loadPage() {
     let loader = document.getElementById('loader');
     loader.classList.add('loader_opened');
 
-    const response = await fetch('https://ma-cats-api.herokuapp.com/api/cats?&per_page=12');
+    const response = await fetch(`https://api.cryptokitties.co/v2/kitties?offset=${(currentPage - 1) * per_page}&limit=${per_page}&search=${searchString}&orderDirection=${orderdir}&orderBy=${orderby}`);
     const cats = await response.json();
 
+
     setTimeout(function () {
-        document.querySelector('.ov_common_card').insertAdjacentHTML("afterbegin", renderKittens(cats.cats));
+        document.querySelector('.ov_common_card').innerHTML = renderKittens(cats.kitties);
         loader.classList.remove('loader_opened');
     }, 2000);
-});
+}
+
+document.addEventListener("DOMContentLoaded", loadPage);
+[...document.getElementsByClassName("button_next")].forEach(button => button.addEventListener('click', () => {
+    currentPage++;
+    loadPage();
+}));
+[...document.getElementsByClassName("button_prev")].forEach(button => button.addEventListener('click', () => {
+    currentPage--;
+    loadPage();
+}));
+
+document.getElementById("search-button").onclick = function (event) {
+    searchString = document.getElementById("text-to-find").value;
+    loadPage();
+};
+
+document.getElementById("orderby-select").onchange = function (event) {
+    orderby = event.target.value;
+    loadPage();
+};
+
+document.getElementById('orderdir-button').onclick = function (event) {
+    orderdir = orderdir === 'asc'
+        ? 'desc'
+        : 'asc';
+    event.target.innerText = orderdir === 'asc'
+        ? 'low to high'
+        : 'hight to low';
+
+    loadPage();
+};
+
 

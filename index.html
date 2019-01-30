@@ -2,6 +2,9 @@
 <html lang="en">
 <link rel="stylesheet" href="loaders.min.css" type="text/css" media="screen">
 <link rel="stylesheet" href="dist/style.min.css">
+<link rel="stylesheet" href="https://github.com/oksanarutska/ui-components-library/blob/master/dist/css/main.css">
+<link href="https://github.com/oksanarutska/ui-components-library/blob/master/dist/main.js">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
@@ -14,9 +17,34 @@
     <div></div>
   </div>
 </div>
+<div id="search-form" class="search-form">
+  <input type="submit" title="Start searching" value="" id="search-button">
+  <input type="text" placeholder="Search" id="text-to-find" name="search">
+</div>
+<div class="wrapper_nav">
+ <div class="wrapper_search">
+   <select id="orderby-select" name="select">
+     <option value="" selected></option>
+     <option value="current_price">price</option>
+     <option value="cooldown" >Cooldown</option>
+   </select>
+
+   <div role="button" class="toggle_button">
+     <button id="orderdir-button" type="button">low to high</button>
+   </div>
+ </div>
+  <div class="wrapper_sort">
+
+  </div>
+</div>
+
+
 <div class="ov_common_card"></div>
 
-
+<div style="display: flex; margin: 0 auto; width: 80%; justify-content: center">
+  <button class="button_prev">prev</button>
+  <button class="button_next">next</button>
+</div>
 <script src="main.js"></script>
 
 </body>
